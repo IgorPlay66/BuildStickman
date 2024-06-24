@@ -26,7 +26,7 @@ bot.on("callback_query", function (query) {
 });
 bot.on("inline_query", function (iq) {
     bot.answerInlineQuery(iq.id, [{
-        type: "app",
+        type: "miniapp",
         id: "0",
         game_short_name: gameName
     }]);
