@@ -7,26 +7,7 @@
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=1280 height=720 tabindex="-1" style="width: 1280px; height: 720px; background: #231F20"></canvas>
-    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
-    <script>
-      
-const firebaseConfig = {
-  apiKey: "AIzaSyApOlafR4xsduWhLMkHOm7Kq3nTCwtaN0c",
-  authDomain: "stickmanmafia-28935.firebaseapp.com",
-  databaseURL: "https://stickmanmafia-28935-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "stickmanmafia-28935",
-  storageBucket: "stickmanmafia-28935.appspot.com",
-  messagingSenderId: "986759488675",
-  appId: "1:986759488675:web:0435f73d9aa303f57bcb16"
-};
-
-// Initialize Firebase
-const db = firebaseApp.firestore();
-const auth = firebaseApp.auth();
- </script>
     <script src="Build/BuildStickman.loader.js"></script>
-
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -45,9 +26,9 @@ const auth = firebaseApp.auth();
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/BuildStickman.data",
-        frameworkUrl: "Build/BuildStickman.framework.js",
-        codeUrl: "Build/BuildStickman.wasm",
+        dataUrl: "Build/BuildStickman.data.gz",
+        frameworkUrl: "Build/BuildStickman.framework.js.gz",
+        codeUrl: "Build/BuildStickman.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Eternity LIfe",
         productName: "Mafia Stickman 3D",
@@ -56,6 +37,5 @@ const auth = firebaseApp.auth();
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
-
   </body>
 </html>
